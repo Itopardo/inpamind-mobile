@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "INPAMIND",
+    "slug": "inpamind-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0C1A3A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.inpamind.visitas",
+      "infoPlist": {
+        "NSCameraUsageDescription": "INPAMIND necesita acceso a tu cámara para tomar fotos de las visitas técnicas.",
+        "NSPhotoLibraryUsageDescription": "INPAMIND necesita acceso a tu galería para adjuntar fotos a las visitas."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0C1A3A"
+      },
+      "package": "com.inpamind.visitas",
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "INPAMIND necesita acceso a tus fotos.",
+          "cameraPermission": "INPAMIND necesita acceso a tu cámara."
+        }
+      ]
+    ]
+  }
+}
